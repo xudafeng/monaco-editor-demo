@@ -9,7 +9,7 @@ require.config({
 const container = document.getElementById('container');
 
 require(['vs/editor/editor.main'], () => {
-  fetch('/').then(response => response.text()).then(html => {
+  fetch('./').then(response => response.text()).then(html => {
     window.editor = monaco.editor.create(container, {
       value: html,
       language: 'html',
